@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+  --bg: #050816;
+  --panel: #141a33;
+  --accent: #6ee7ff;
+  --danger: #ff6b6b;
+  --text: #ebf4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(circle at top, #182449, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.game-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--panel) 90%, #ffffff 10%);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #012433;
+  font-weight: 700;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.canvas-wrapper {
+  background: color-mix(in oklab, var(--panel) 92%, black 8%);
+  padding: 0.8rem;
+  border-radius: 16px;
+}
+
+canvas {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 12px;
+  border: 2px solid color-mix(in oklab, var(--accent) 45%, #0a0f21);
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(#081024, #04060f);
+}
+
+#status {
+  margin: 0.8rem auto 0;
+  text-align: center;
+  color: #c8dcff;
+}
+
+.mobile-controls {
+  display: none;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.mobile-controls div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .mobile-controls {
+    display: grid;
+    justify-items: center;
+  }
+
+  .mobile-controls button {
+    min-width: 56px;
+  }
+}
+
+.game-over {
+  color: var(--danger);
+  font-weight: 700;
+}

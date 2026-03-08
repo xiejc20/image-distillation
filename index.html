@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星际躲避者</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-page">
+      <header>
+        <h1>🚀 星际躲避者</h1>
+        <p>使用方向键或 A/W/S/D 控制飞船，躲避陨石并尽可能存活更久！</p>
+      </header>
+
+      <section class="hud" aria-label="游戏信息">
+        <div>分数：<strong id="score">0</strong></div>
+        <div>最高分：<strong id="high-score">0</strong></div>
+        <button id="start-btn" type="button">开始游戏</button>
+      </section>
+
+      <section class="canvas-wrapper">
+        <canvas id="game" width="540" height="720" aria-label="小游戏画布"></canvas>
+        <p id="status" role="status" aria-live="polite">点击“开始游戏”后进入星际航线。</p>
+      </section>
+
+      <footer>
+        <p>提示：手机端可使用屏幕下方按钮控制飞船。</p>
+      </footer>
+
+      <section class="mobile-controls" aria-label="移动控制">
+        <button data-dir="up">↑</button>
+        <div>
+          <button data-dir="left">←</button>
+          <button data-dir="down">↓</button>
+          <button data-dir="right">→</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
