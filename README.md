@@ -1,2 +1,18 @@
 # image-distillation
-image distillation
+
+一个轻量的前端小游戏：**《星际闪避》**。
+
+## 玩法
+
+- 点击「开始游戏」进入挑战。
+- 使用方向键或 `WASD` 控制飞船移动。
+- 躲开陨石，每躲过一个陨石得 1 分。
+- 初始生命值为 3，碰撞 3 次后游戏结束。
+
+## 本地运行
+
+```bash
+python3 -m http.server 8000
+```
+
+然后访问 <http://localhost:8000> 即可。

@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', 'PingFang SC', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1f2a44 0%, #090d16 60%, #05070d 100%);
+  color: #eef4ff;
+}
+
+.app {
+  width: min(92vw, 560px);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+  font-weight: 700;
+}
+
+#startBtn {
+  border: none;
+  background: #5b87ff;
+  color: white;
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.08s ease, background-color 0.2s ease;
+}
+
+#startBtn:hover {
+  background: #789eff;
+}
+
+#startBtn:active {
+  transform: translateY(1px);
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #2f4a7e;
+  background: linear-gradient(#08101d 0%, #071425 50%, #061123 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.message {
+  min-height: 1.3rem;
+  margin-top: 0.8rem;
+  color: #c8d9ff;
+}
