@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>星际闪避小游戏</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>🚀 星际闪避</h1>
+    <p class="desc">用方向键或 WASD 控制飞船，躲避陨石并尽可能坚持更久！</p>
+
+    <section class="hud">
+      <div>得分：<span id="score">0</span></div>
+      <div>生命：<span id="health">3</span></div>
+      <button id="startBtn" type="button">开始游戏</button>
+    </section>
+
+    <canvas id="game" width="500" height="600" aria-label="游戏画布"></canvas>
+    <p id="message" class="message">点击“开始游戏”后进行挑战。</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
